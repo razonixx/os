@@ -1,11 +1,5 @@
 #include <stdio.h>
 __global__
-void saxpy(int n, float a, float *x, float *y)
-{
-  int i = blockIdx.x*blockDim.x + threadIdx.x;
-  if (i < n) y[i] = a*x[i] + y[i];
-}
-
 void saxpy(long iter){
     int i,j,k =0;
     int a[256], b[256], c[256];
